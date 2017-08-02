@@ -251,3 +251,9 @@ footer {
   bottom: 5px;
   right: 5px;
 }
+
+/* My custom CSS */
+.black_bg_green_color{
+  background-color: #000 ;
+  color: #0f0 ;
+}
