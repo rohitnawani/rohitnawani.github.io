@@ -9,7 +9,7 @@
     <meta name="description" content="This is Rohit Nawani's personal website.">
     <meta name="author" content="Rohit Nawani">
     <link rel="icon" href="img/logo.png">
-    <title>Rohit Nawani</title>
+    <title>Rohit Nawani | Decryption</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,68 +32,48 @@
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Rohit Nawani</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick=$("#menu-close").click();>About Me</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$("#menu-close").click();>Skills</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>My Work</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact Me</a>
-            </li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+          <li class="sidebar-brand">
+              <a href="index.html#top" onclick=$("#menu-close").click();>Rohit Nawani</a>
+          </li>
+          <li>
+              <a href="index.html#top" onclick=$("#menu-close").click();>Home</a>
+          </li>
+          <li>
+              <a href="index.html#about" onclick=$("#menu-close").click();>About Me</a>
+          </li>
+          <li>
+              <a href="index.html#services" onclick=$("#menu-close").click();>Skills</a>
+          </li>
+          <li>
+              <a href="index.html#portfolio" onclick=$("#menu-close").click();>My Work</a>
+          </li>
+          <li>
+              <a href="index.html#contact" onclick=$("#menu-close").click();>Contact Me</a>
+          </li>
+      </ul>
+  </nav>
 
     <!-- My Work -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>My Work</h2>
+                    <h2>Mono-substitution Decryption Program</h2>
                     <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/decryp.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/pac.gif">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/friends.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/B5B.png">
-                                </a>
-                            </div>
-                        </div>
+                    <p class="text-left">
+                      I was awarded first place at <a href="http://www.uvm.edu/~uvmpr/?Page=news&storyID=23823&category=uvmhome"> UVM CS Fair </a> with this cryptography program in December 2016.
+                    </p>
+                    <br>
+                    <p class="text-left"> This is a Python program that can decrypt mono-substitution cipher text and translate it back to its original English passage without knowing the key by frequency analysis.
+                    </p>
+                    <br>
+                    <p class="text-right"> For more detail, check out my <a href="https://github.com/grindfather/Decryption">code </a>
+                    </p>
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -112,7 +92,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div id="contact" class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>Contact me</strong>
