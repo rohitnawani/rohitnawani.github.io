@@ -20,7 +20,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    color: rgb(0,255,0);
+    color: #fff ;
 }
 
 .text-vertical-center h1 {
@@ -28,7 +28,7 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
-    color: rgb(0,255,0);
+    color: #fff ;
 }
 
 /* Custom Button Styles */
@@ -207,6 +207,7 @@ hr.small {
 
 .img-portfolio {
     margin: 0 auto;
+    height: 300px ;
 }
 
 .img-portfolio:hover {
@@ -253,7 +254,21 @@ footer {
 }
 
 /* My custom CSS */
-.black_bg_green_color{
+.black_bg{
   background-color: #000 ;
+}
+
+.green_color{
   color: #0f0 ;
+}
+
+.black_color{
+  color: #000 ;
+}
+
+
+.skills_list{
+  list-style-type: none ;
+  text-align: center;
+  color: #fff ;
 }
