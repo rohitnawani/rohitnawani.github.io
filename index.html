@@ -1,338 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="This is Rohit Nawani's personal website.">
     <meta name="author" content="Rohit Nawani">
+
     <title>Rohit Nawani</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <!-- AMAZING EMJOI -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
-</head>
+  </head>
 
-<body>
-
-  <!-- Navigation -->
-  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-  <nav id="sidebar-wrapper">
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
-          <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-          <li class="sidebar-brand">
-              <a href="index.html#top" onclick=$("#menu-close").click();>Rohit Nawani</a>
-          </li>
-          <li>
-              <a href="index.html#top" onclick=$("#menu-close").click();>Home</a>
-          </li>
-          <li>
-              <a href="index.html#about" onclick=$("#menu-close").click();>About Me</a>
-          </li>
-          <li>
-              <a href="index.html#services" onclick=$("#menu-close").click();>Skills</a>
-          </li>
-          <li>
-              <a href="index.html#portfolio" onclick=$("#menu-close").click();>My Work</a>
-          </li>
-          <li>
-              <a href="index.html#contact" onclick=$("#menu-close").click();>Contact Me</a>
-          </li>
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Rohit Nawani</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About Me</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Skills</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Projects and Exploration </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
       </ul>
-  </nav>
+    </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Rohit Nawani</h1>
-            <h4>My Interest &isin; Computer Science &cup; Mathematics </h4>
-            <br>
-        </div>
+    <header class="masthead d-flex">
+      <div class="container text-right my-auto" >
+        <h1 class="mb-1" style= "font-size: 6em" >Rohit Nawani</h1>
+        <h5 class="mb-5">
+          <em> My Interest &isin; Computer Science &cup; Mathematics </em>
+        </h5>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Click Me <i class="em em-smiley"></i></a>
+      </div>
+      <div class="overlay"></div>
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-left">
-                    <h2 class = "text-left">About me</h2>
-                    <p class="lead">Hi! I am Rohit Nawani from Hong Kong, currently a student at New York University. Majoring in Computer Science and Mathematics allows me to work towards my long-term academic interests, Machine Learning and Natural Langauge Processing.
-                    <br><br> I was awarded first place at <a href="http://www.uvm.edu/~uvmpr/?Page=news&storyID=23823&category=uvmhome"> UVM CS Fair </a> with my <a href="decryption.html"> cryptography program </a> in December 2016.
-                    <br>  </p>
-                </div>
-            </div>
-            <!-- /.row -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-left">
+        <div class="row">
+          <div class="col-lg-10 mx-auto lead">
+            <h2  class = "text-center">About me</h2>
+            <p>Hi! I am Rohit Nawani from Hong Kong <i class="em em-flag-hk"></i> ,
+              currently a Computer Science and Mathematics major at New York University <i class="em em-flag-um"></i> .</p>
+            <p>I like telling stories with data and quantifying the unquantifiable!
+              I get distracted easily by beautiful Mathematical patterns. My current interest is Probability Theory and Predictive Analysis.
+            <br><br> I was awarded first place at <a href="http://www.uvm.edu/~uvmpr/?Page=news&storyID=23823&category=uvmhome"> UVM CS Fair </a> with my <a href="decryption.html"> cryptography program </a> in December 2016.
+            <br>  </p>
+          </div>
         </div>
-        <!-- /.container -->
+      </div>
     </section>
 
-    <!-- Skills -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary black_bg green_color">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Skills</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-code fa-stack-1x text-primary black_color"></i>
-                            </span>
-                                <h4>
-                                    <strong>Skills</strong>
-                                </h4>
-                                <ul class = "skills_list">
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>C++</li>
-                                <li>SQL</li>
-                                <li>Tableau</li>
-                                <li>VBA</li>
-                                <li>Matlab</li>
-                                <li>Mac OS X</li>
-
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-code-fork fa-stack-1x text-primary black_color"></i>
-                            </span>
-                                <h4>
-                                    <strong>WebDev Skills</strong>
-                                </h4>
-                                <ul class = "skills_list">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>Javascript</li>
-                                <li>PHP</li>
-                                <li>React</li>
-                                <li>Node.Js</li>
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-superscript fa-stack-1x text-primary black_color"></i>
-                            </span>
-                                <h4>
-                                    <strong>Math</strong>
-                                </h4>
-                                <ul class = "skills_list">
-                                <li>Linear Algebra</li>
-                                <li>Numerical Analysis</li>
-                                <li>Actuarial Math</li>
-                                <li>Combinatorics</li>
-                                <li>Group Theory</li>
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-language fa-stack-1x text-primary black_color"></i>
-                            </span>
-                                <h4>
-                                    <strong>Language</strong>
-                                </h4>
-                                <ul class = "skills_list">
-                                <li>English</li>
-                                <li>Cantonese</li>
-                                <li>Mandarian</li>
-                                <li>Spanish <i>in progress</i></li>
-                              </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+      <div class="container">
+        <div class="content-section-heading">
+          <h2 class="mb-5">Skills</h2>
         </div>
-        <!-- /.container -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fa fa-code"></i>
+            </span>
+            <h4>
+              <strong>Skills</strong>
+            </h4>
+            <ul class="text-faded mb-0 skills_list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>C++</li>
+              <li>SQL</li>
+              <li>Terminal</li>
+              <li>Tableau</li>
+              <li>VBA</li>
+              <li>Matlab</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fa fa-code-fork"></i>
+            </span>
+            <h4>
+              <strong>WebDev</strong>
+            </h4>
+            <ul class="text-faded mb-0 skills_list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Javascript</li>
+              <li>PHP</li>
+              <li>React</li>
+              <li>Node.Js</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fa fa-superscript"></i>
+            </span>
+            <h4>
+              <strong>Math</strong>
+            </h4>
+            <ul class="text-faded mb-0 skills_list">
+              <li>Linear Algebra</li>
+              <li>Numerical Analysis</li>
+              <li>Combinatorics</li>
+              <li>Group Theory</li>
+              <li>Actuarial Math</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fa fa-language"></i>
+            </span>
+            <h4>
+              <strong>Language</strong>
+            </h4>
+            <ul class="text-faded mb-0 skills_list">
+              <li>English</li>
+              <li>Cantonese</li>
+              <li>Mandarian</li>
+              <li>Spanish <i>in progress</i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- My Work -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>My Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="decryption.html">
-                                    <img class="img-portfolio img-responsive" src="img/decryp.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="pacman.html">
-                                    <img class="img-portfolio img-responsive" src="img/pac.gif">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="friend.html">
-                                    <img class="img-portfolio img-responsive" src="img/friends.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="b5b.html">
-                                    <img class="img-portfolio img-responsive" src="img/B5B.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h2 class="mb-5">Projects and Exploration</h2>
         </div>
-        <!-- /.container -->
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="1_webscrap.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Web Scrapper - Beautiful Soup</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="2_decrypt.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Decryption</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="3_pacman.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Pacman</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="4_slackbot.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Slack Bot</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="5_youtube.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Virality of YouTube videos</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="6_algo.html">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Algorithms</h2>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div  id="contact" class="container" >
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Contact me</strong>
-                    </h4>
-
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (802) 777-7937</li>
-                        <li><i class="fa fa-envelope-o fa-fw "></i> <a href="mailto:rohitnawan@gmail.com" class="black_color">rohitnawan@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.linkedin.com/in/rohit-nawani/"><i class="fa fa-linkedin fa-fw fa-3x black_color"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/grindfather"><i class="fa fa-github fa-fw fa-3x black_color"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Rohit Nawani 2017</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    <footer class="footer text-center" id="contact">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="mailto:rohitnawan@gmail.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rohit-nawani/">
+              <i class="icon-social-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://github.com/grindfather">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
-    </script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-</body>
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+  </body>
 
 </html>

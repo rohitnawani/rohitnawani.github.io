@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Rohit Nawani's personal website.">
+    <meta name="author" content="Rohit Nawani">
+
+    <title>Rohit Nawani</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <!-- AMAZING EMJOI -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+  <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Rohit Nawani</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About Me</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Skills</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Projects and Exploration </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- My Work -->
+    <section class="content-section bg-primary text-white">
+      <div class="container text-left">
+        <h2 class="mb-4 text-center">Decryption - Mono-substitution Cipher</h2>
+        <p> Mono-substitution Cipher is simply a fancy term of reassigning
+          all the alphabets of a text in a 1-1 manner. This is the oldest,
+          simpliest and least secure encryption (because even I can decrypt it
+          ... kind of).
+
+          <br> </br>
+
+          To be uneccearily technical, let's look at the precise definition of this cipher.
+          Let A be the set of all given alphabets. There exists a bijective function f
+          that maps A to A. Since f is a bijective function, this means there exists an inverse
+          function of f. In short, this means Mono-substitution Cipher is crackable.
+
+          <br> </br>
+
+          The key tells you which letters get assigned to which.  My goal is to be able to
+          decrypt a ciphered text without accessing the key and this project investigates
+          specifically in English passages using frequecny analysis. The following diagram
+          demonstrates frequency of English letter counts.
+
+          <br> </br>
+
+          <img src="img/freq_1letter.jpg"  width="500">
+
+          <br> </br>
+
+          or if you prefer colored representation like I do. <i class="em em-rainbow"></i>
+
+          <br> </br>
+
+          <img src="img/freq_1letter_color.png"  width="1000">
+
+          <br> </br>
+
+          Since there is a huge difference in counts between most frequent letter <em> e </em>
+          and second most frequent letter <em> t </em>, we can make an assumption that the
+          most frequent letter in the ciphered text must be <em> e </em> originally given that
+          the English passage is large enough. Now that we have decrypted one of the 26 letters,
+          the rest is super easy to crack. The following diagram shows that
+          <em> the </em> is the most frequent word in English. Given that we have already decrypted letter
+          <em> e </em>, we can easily decrypt letter <em> t </em> and <em> h </em> by finding the most
+          frequent 3-letter word that ends with letter <em> e </em> in the ciphered text.
+
+          <br> </br>
+
+          <img src="img/freq_2_3letter.png"  width="500">
+
+          <br> </br>
+
+          Following along with the logic, I managed to decrypt over 80% of most encrypted English passages.
+          This might not sound like a lot but it is more than enough to read and understand these encrypted
+          text. My next goal with this project is utilising combintorial techniques to analyse various patterns in the
+          board game SCRAMBLE.
+
+
+          <br> </br>
+
+          I was fortunate to be awarded first place at <a href="http://www.uvm.edu/~uvmpr/?Page=news&storyID=23823&category=uvmhome" style="background-color: #ffffff">
+          UVM CS Fair</a> with this cryptography project in December 2016.
+
+          <br> </br>
+
+          <img src="img/csfair.jpg"  width="300">
+
+          <br> </br>
+          <br> </br>
+          <br> </br>
+
+          <b>Source of all frequency visulisation:</b>
+          <br />
+          <a href="http://norvig.com/mayzner.html" style="background-color: #ffffff">http://norvig.com/mayzner.html</a>
+           by Dr. Peter Norvig
+
+
+
+        </p>
+
+        <p class="text-right">For more detail, check out my <a href="https://github.com/grindfather/Decryption"
+          style="background-color: #ffffff"> code </a>
+        </p>
+
+      </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="contact">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="mailto:rohitnawan@gmail.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rohit-nawani/">
+              <i class="icon-social-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://github.com/grindfather">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+    </body>
+
+    </html>

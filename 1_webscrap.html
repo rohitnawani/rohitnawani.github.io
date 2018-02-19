@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Rohit Nawani's personal website.">
+    <meta name="author" content="Rohit Nawani">
+
+    <title>Rohit Nawani</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <!-- AMAZING EMJOI -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+  <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Rohit Nawani</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About Me</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Skills</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Projects and Exploration </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- My Work -->
+    <section class="content-section bg-primary text-white">
+      <div class="container text-left">
+        <h2 class="mb-4 text-center">Web Scrapper - Beautiful Soup</h2>
+        <p> I took this super awesome Data Science class with a professor who writes argubaly the best lecture notes and
+          Jupyter notebooks I have ever read. At the end of the last class, I went up to him and asked if I can possibly
+          save a copy of all his notes. He replied "<em>Sure as long as you don't distribute them out to the public. It's
+          all on my website. You should be able to write a script for that</em>". Challange Accepted! <i class="em em-i_love_you_hand_sign"></i>
+
+          <br> </br>
+
+          Firstly, I used this AMAZING library - Beautiful Soup, and converted the website url into a Soup object.
+
+          <br> </br>
+
+          <!-- Code Snippet -->
+          <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">requests</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">urllib</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">bs4</span> <span style="color: #008800; font-weight: bold">import</span> BeautifulSoup
+
+URL <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;fill in web url&quot;</span>
+link <span style="color: #333333">=</span> requests<span style="color: #333333">.</span>get(URL)
+soup <span style="color: #333333">=</span> BeautifulSoup(link<span style="color: #333333">.</span>text, <span style="background-color: #fff0f0">&#39;html.parser&#39;</span>)
+</pre></div>
+
+        <br> </br>
+
+        Mini screenshot of the website
+
+        <br> </br>
+
+        <img src="img/webscrape.png" height="100"  >
+
+        <br> </br>
+
+        Since his notes are stored in the hyperlinks of these blue buttons above, also known as &lt;a&gt; tags,
+        the following code digs up these hyperlinks and download them to my local machine.
+
+        <br> </br>
+
+        <!-- Code Snippet --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Find all a tags</span>
+a_tag_list <span style="color: #333333">=</span> soup<span style="color: #333333">.</span>find_all(<span style="background-color: #fff0f0">&#39;a&#39;</span>)
+
+<span style="color: #888888"># Extract url from &lt;a&gt; </span>
+url_list <span style="color: #333333">=</span> []
+<span style="color: #008800; font-weight: bold">for</span> each <span style="color: #000000; font-weight: bold">in</span> a_tag_list:
+    <span style="color: #008800; font-weight: bold">if</span> <span style="background-color: #fff0f0">&#39;role&#39;</span> <span style="color: #000000; font-weight: bold">in</span> each<span style="color: #333333">.</span>attrs <span style="color: #000000; font-weight: bold">and</span> each[<span style="background-color: #fff0f0">&quot;role&quot;</span>]<span style="color: #333333">==</span><span style="background-color: #fff0f0">&#39;button&#39;</span>:
+        url_list<span style="color: #333333">.</span>append(each[<span style="background-color: #fff0f0">&quot;href&quot;</span>])
+
+<span style="color: #888888"># Download all files and save on local machine!</span>
+<span style="color: #008800; font-weight: bold">for</span> each <span style="color: #000000; font-weight: bold">in</span> url_list:
+    file <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;DS_Notes/&quot;</span>
+    urllib<span style="color: #333333">.</span>request<span style="color: #333333">.</span>urlretrieve(URL<span style="color: #333333">+</span>each, file<span style="color: #333333">+</span>each)
+</pre></div>
+
+  <br> </br>
+
+  This is just an example of how an easy-to-learn language such as Python can be so helpful in our daily lives.</p><p>
+  Hope you find this useful!
+
+</p>
+
+      </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="contact">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="mailto:rohitnawan@gmail.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rohit-nawani/">
+              <i class="icon-social-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://github.com/grindfather">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+    </body>
+
+    </html>
