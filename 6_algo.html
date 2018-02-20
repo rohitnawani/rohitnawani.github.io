@@ -58,10 +58,33 @@
     <!-- My Work -->
     <section class="content-section bg-primary text-white">
       <div class="container text-left">
-        <h2 class="mb-4 text-center">Algorithms</h2>
-        <p> DATA VIZZZZ
+        <h2 class="mb-4 text-center">Hashing Collision - Separate Chaining versus Linear Probing</h2>
+        <p> Hashing functions are not perfect. Sometimes you might run into hashing collision where
+          different objects are hashed into the same location - hashing collision. There are ususally
+          two different ways to solve this problem - separate chainig or probing. Separate chaining is
+          just linked all objects that are hashed to the same location as a linked list whereas probing
+          place the object at the next avaible spot. It is very counter intuitive when I first learnt
+          that probing, even linear probing, can be more time efficient than separate chaining. As a
+          stubborn student, I decided to analyse runtime of the two methods.
           <br> </br>
 
+          <img src="img/algo_viz.png" width="700">
+
+          <br> </br>
+
+          The plot above clearly indicates that as sample size increases, it requires more reads
+          to perform search operation with separate chaining whereas number of reads don't seem to change much
+          with linear probing. The trick to linear probing is that each time we increase the capacity of the hashed
+          table, we redistribute the previous elements in a more scattered fashion so that there will be more spaces
+          between elements to store any hashing-collided objects.
+
+          <br> </br>
+
+          Note that linear probing is not perfect because more memory is needed than with separate
+          chaining.
+          <br> </br>
+          Welcome to the world of algorithms; there is no magical unicorn <i class="em em-unicorn_face"></i> algorithm - everything
+          is a trade-off.
         </p>
 
       </div>
