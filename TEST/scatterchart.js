@@ -32,6 +32,7 @@
 	.attr('class', 'main axis date')
 	.call(xAxis);
 
+
     // draw the y axis
     var yAxis = d3.svg.axis()
 	.scale(y)
