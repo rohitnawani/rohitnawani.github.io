@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Rohit Nawani's personal website.">
+    <meta name="author" content="Rohit Nawani">
+
+    <title>Rohit Nawani</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <!-- AMAZING EMJOI -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    <!-- load the d3.js library -->    
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <style>
+
+    .link {
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+
+    .node {
+      cursor: move;
+      fill: #ccc;
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+
+    .node.fixed {
+      fill: #f00;
+    }
+
+    </style>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+      <a class="menu-toggle rounded" href="#">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a class="js-scroll-trigger" href="index.html">Rohit Nawani</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="index.html#page-top">Home</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="index.html#about">About Me</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="index.html#skills">Skills</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="index.html#portfolio">Projects and Exploration </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+
+    <!-- My Work -->
+    <section class="content-section bg-primary text-white">
+      <div class="container text-left" id="tree">
+        <h2 class="mb-4 text-center">The NAWANI Family Tree</h2>
+
+      </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="contact">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="mailto:rohitnawan@gmail.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rohit-nawani/">
+              <i class="icon-social-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://github.com/rohitnawani">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+
+
+    <script>
+
+    var graph = {
+                  "nodes": [
+
+                    {"x": 900, "y": 350, "name": "Jagdish"},  //0
+                    {"x": 850, "y": 350, "name": "Vinita"},   //1 
+                    {"x": 900, "y": 450, "name": "Bhavesh"},  //2
+                    {"x": 850, "y": 450, "name": "Ashish"},   //3
+
+                    {"x": 800, "y": 350, "name": "Santosh"},  //4
+                    {"x": 750, "y": 350, "name": "Eva"},      //5
+                    {"x": 800, "y": 450, "name": "Rohit"},    //6
+
+                    // {"x": 700, "y": 350, "name": "Suresh"},   //7
+                    // {"x": 650, "y": 350, "name": "Lavina"},   //8
+                    // {"x": 700, "y": 450, "name": "Neha"},     //9
+                    // {"x": 650, "y": 450, "name": "Nikhil"},   //10
+
+                    // {"x": 600, "y": 350, "name": "Manoj"},    //11
+                    // {"x": 550, "y": 350, "name": "Reena"},    //12
+                    // {"x": 600, "y": 450, "name": "Aditya"},   //13
+                    // {"x": 550, "y": 450, "name": "Jiaan"},    //14
+
+                    // {"x": 800, "y": 250, "name": "Atmaram"},  //15
+                    // {"x": 600, "y": 250, "name": "Kamla"},    //16
+
+                    // // **********
+
+                    // {"x": 469, "y": 450, "name": "Hirdesh"},  //17
+                    // {"x": 493, "y": 450, "name": "Chitra"},   //18
+                    // {"x": 469, "y": 350, "name": "Dhruv"},    //19
+                    // {"x": 493, "y": 350, "name": "Ojas"},     //20
+
+                    // {"x": 469, "y": 410, "name": "Mikki"},    //21
+                    // {"x": 493, "y": 364, "name": "Raju"},     //22
+                    // {"x": 469, "y": 410, "name": "Carishma"}, //23
+                    // {"x": 493, "y": 364, "name": "Pooja"},    //24
+
+                    // {"x": 469, "y": 410, "name": "Meenu"},    //25
+                    // {"x": 493, "y": 364, "name": "Raja"},     //26
+
+                    // {"x": 469, "y": 250, "name": "Kanayalal"},//27
+                    // {"x": 493, "y": 250, "name": "Pushpa"},   //28
+
+                    // // **********
+
+                    // {"x": 469, "y": 410, "name": "Kavita"},   //29
+                    // {"x": 493, "y": 364, "name": "Raj"},      //30
+                    // {"x": 469, "y": 410, "name": "Hriday"},   //31
+
+                    // {"x": 493, "y": 364, "name": "Rashimi"},  //32
+
+                    // {"x": 469, "y": 410, "name": "Kunal"},    //33
+
+                    // {"x": 469, "y": 250, "name": "Pooran"},   //34
+                    // {"x": 493, "y": 250, "name": "Sheela"},   //35
+
+
+                  ],
+
+                  "links": [
+                    {"source":  0, "target":  2},
+                    {"source":  0, "target":  3},
+                    {"source":  1, "target":  2},
+                    {"source":  1, "target":  3},
+
+                    {"source":  4, "target":  6},
+                    {"source":  5, "target":  6}
+
+                    // {"source":  7, "target":  9},
+                    // {"source":  7, "target":  10},
+                    // {"source":  8, "target":  9},
+                    // {"source":  8, "target":  10},
+
+                    // {"source":  11, "target":  13},
+                    // {"source":  11, "target":  14},
+                    // {"source":  12, "target":  13},
+                    // {"source":  12, "target":  14},
+
+                    // {"source":  15, "target":  0},
+                    // {"source":  15, "target":  4},
+                    // {"source":  15, "target":  7},
+                    // {"source":  15, "target":  11},
+                    // {"source":  16, "target":  0},
+                    // {"source":  16, "target":  4},
+                    // {"source":  16, "target":  7},
+                    // {"source":  16, "target":  11},
+
+                    // // **********
+
+                    // {"source":  17, "target":  19},
+                    // {"source":  17, "target":  20},
+                    // {"source":  18, "target":  19},
+                    // {"source":  18, "target":  20},
+
+                    // {"source":  21, "target":  23},
+                    // {"source":  21, "target":  24},
+                    // {"source":  22, "target":  23},
+                    // {"source":  22, "target":  24},
+
+                    // {"source":  27, "target":  17},
+                    // {"source":  27, "target":  21},
+                    // {"source":  27, "target":  25},
+                    // {"source":  28, "target":  17},
+                    // {"source":  28, "target":  21},
+                    // {"source":  28, "target":  25},
+
+                    // // **********
+
+                    // {"source":  29, "target":  31},
+                    // {"source":  30, "target":  31},
+
+                    // {"source":  34, "target":  29},
+                    // {"source":  34, "target":  32},
+                    // {"source":  34, "target":  33},
+                    // {"source":  35, "target":  29},
+                    // {"source":  35, "target":  32},
+                    // {"source":  35, "target":  33},
+
+                  ]
+                }
+
+    var width = 960,
+        height = 700;
+
+    var force = d3.layout.force()
+        .size([width, height])
+        .on("tick", tick)
+        .charge(-400)
+        .linkDistance(40)
+        .nodes(graph.nodes)
+        .links(graph.links)
+        .start();
+
+    var drag = force.drag()
+        .on("dragstart", dragstart);
+
+    var svg = d3.select("#tree").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var link = svg.selectAll(".link")
+                  .data(graph.links)
+                  .enter().append("line")
+                  .attr("class", "link");
+
+    var node_g = svg.selectAll(".node")
+        .data(graph.nodes)
+      .enter().append("g")
+        .attr("class", "node_g");
+
+    var node = node_g.append("circle")
+        .attr("class", "node")
+        .attr("r", 12)
+        .on("dblclick", dblclick)
+        .call(drag);
+
+    var text = node_g.append("text")
+        .text(function(d) { return d.name });
+
+
+    function tick() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node_g.attr('transform', function(d){
+        return 'translate(' + d.x + ',' + d.y + ')';
+    });
+
+      text.attr("dx", function(d) { return d.x - 4; })
+          .attr("dy", function(d) { return d.y - 15; });
+
+
+    }
+
+    function dblclick(d) {
+      d3.select(this).classed("fixed", d.fixed = false);
+    }
+
+    function dragstart(d) {
+      d3.select(this).classed("fixed", d.fixed = true);
+    }
+
+    </script>
+
+    </body>
+
+    </html>
+
